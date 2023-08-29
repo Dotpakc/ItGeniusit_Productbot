@@ -15,4 +15,5 @@ main_keyboard.add(types.InlineKeyboardButton(text="📞Контакти", callba
 
 
 main_back_keyboard = types.InlineKeyboardMarkup(row_width=2)
-main_back_keyboard.add(types.InlineKeyboardButton(text="👈 В головне меню ", callback_data="main_menu"))
+btn_main_back_keyboard = types.InlineKeyboardButton(text="👈 В головне меню ", callback_data="main_menu")
+main_back_keyboard.add(btn_main_back_keyboard)

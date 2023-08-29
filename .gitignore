@@ -1,6 +1,5 @@
 .env
-*.jpg
-*.png
+
 photo_ids.txt
 */__pycache__
 __pycache__
