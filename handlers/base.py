@@ -17,6 +17,13 @@ async def main_menu(call: types.CallbackQuery):
                          +"Якщо ти хочеш дізнатися більше про нас, натисни на кнопку нижче 👇",
                          reply_markup=main_keyboard)
     
+@dp.callback_query_handler(text="main_menu_exit")
+async def courses(call: types.CallbackQuery):
+    await call.message.answer("Привіт! Вітаю тебе в IT Школі Hillel!\n"
+                         +"Якщо ти хочеш дізнатися більше про нас, натисни на кнопку нижче 👇",
+                         reply_markup=main_keyboard)
+    await call.message.delete()
+    
 @dp.callback_query_handler(text="support")
 async def support(call: types.CallbackQuery):
     await call.message.edit_text("Служба підтримки \"Hillel\". \n Напиши своє питання і ми зв'яжемось з тобою найближчим часом",
